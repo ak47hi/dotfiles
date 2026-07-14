@@ -21,6 +21,12 @@ link "$DOTFILES/tmux.conf" "$HOME/.tmux.conf"
 link "$DOTFILES/nvim"      "$HOME/.config/nvim"
 link "$DOTFILES/ghostty"   "$HOME/.config/ghostty"
 
+# zsh: append-only — source the shared config from ~/.zshrc, never replace it
+if ! grep -qF "dotfiles/zshrc.shared" "$HOME/.zshrc" 2>/dev/null; then
+  printf '\n# shared dotfiles zsh config\nsource "%s/zshrc.shared"\n' "$DOTFILES" >> "$HOME/.zshrc"
+  echo "appended zshrc.shared source line to ~/.zshrc"
+fi
+
 # TPM (tmux plugin manager) — clone if missing
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"

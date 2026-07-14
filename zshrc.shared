@@ -1,0 +1,5 @@
+# Shared zsh config, sourced from ~/.zshrc (never replaces it).
+# Machine-specific stuff stays in ~/.zshrc itself.
+
+# fzf shell integration: Ctrl-R fuzzy history, Ctrl-T file picker, Alt-C cd
+command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)

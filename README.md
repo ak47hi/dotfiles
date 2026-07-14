@@ -25,3 +25,4 @@ Then:
 | `nvim/`     | `~/.config/nvim`    |
 | `ghostty/`  | `~/.config/ghostty` |
 | `Brewfile`  | consumed by `brew bundle` |
+| `zshrc.shared` | sourced from `~/.zshrc` (append-only; install.sh adds the source line, never replaces your zshrc) |
