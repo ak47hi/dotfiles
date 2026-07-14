@@ -4,7 +4,6 @@ brew "apache-flink"
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Pack, ship and run any application as a lightweight container
 # Isolated development environments using Docker
 brew "docker-compose"
 # Perl lib for reading and writing EXIF metadata
@@ -49,8 +48,6 @@ brew "plantuml"
 brew "pnpm"
 # Object-relational database system
 brew "postgresql@16", link: true
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Terminal multiplexer
@@ -65,8 +62,12 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# Docker Desktop (engine + GUI); provides the docker CLI that docker-compose needs
+cask "docker-desktop"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# JDK from the Eclipse Foundation (Adoptium)
+# JDK from the Eclipse Foundation (Adoptium) — latest LTS; required by jdtls (Java LSP, needs 17+)
+cask "temurin"
+# JDK 11 for legacy JVM work (Flink 1.18 etc.)
 cask "temurin@11"

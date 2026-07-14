@@ -3,3 +3,13 @@
 
 # fzf shell integration: Ctrl-R fuzzy history, Ctrl-T file picker, Alt-C cd
 command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+
+# zsh plugins (installed via Brewfile)
+if command -v brew >/dev/null 2>&1; then
+  _brew_prefix="$(brew --prefix)"
+  [ -f "$_brew_prefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] \
+    && source "$_brew_prefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  [ -f "$_brew_prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ] \
+    && source "$_brew_prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  unset _brew_prefix
+fi

@@ -27,15 +27,16 @@ if ! grep -qF "dotfiles/zshrc.shared" "$HOME/.zshrc" 2>/dev/null; then
   echo "appended zshrc.shared source line to ~/.zshrc"
 fi
 
-# TPM (tmux plugin manager) — clone if missing
+# TPM (tmux plugin manager) — clone if missing, then install plugins
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
-  echo "installed TPM; run prefix+I inside tmux to install plugins"
 fi
+"$HOME/.tmux/plugins/tpm/bin/install_plugins" || echo "WARNING: tmux plugin install failed; run C-a I inside tmux"
 
 # Homebrew packages
 if command -v brew >/dev/null 2>&1; then
-  brew bundle --file="$DOTFILES/Brewfile" || true
+  brew bundle --file="$DOTFILES/Brewfile" \
+    || echo "WARNING: some Brewfile packages failed to install; run 'brew bundle check --file=$DOTFILES/Brewfile --verbose' to see which"
 else
   echo "homebrew not found; skipping Brewfile (install from https://brew.sh)"
 fi
