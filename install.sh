@@ -41,4 +41,10 @@ else
   echo "homebrew not found; skipping Brewfile (install from https://brew.sh)"
 fi
 
+# mermaid-cli renders via puppeteer, which needs a one-time headless-chrome download
+if command -v mmdc >/dev/null 2>&1 && [ ! -d "$HOME/.cache/puppeteer/chrome-headless-shell" ]; then
+  npx -y puppeteer browsers install chrome-headless-shell \
+    || echo "WARNING: headless chrome download failed; mermaid rendering in nvim won't work until you run: npx puppeteer browsers install chrome-headless-shell"
+fi
+
 echo "done"

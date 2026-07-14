@@ -30,8 +30,12 @@ brew "jq"
 brew "k9s"
 # Colorize your kubectl output
 brew "kubecolor"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Simple terminal UI for git commands
 brew "lazygit"
+# CLI for Mermaid diagrams (mmdc); nvim renders markdown mermaid blocks with it
+brew "mermaid-cli"
 # Java-based project management
 brew "maven"
 # 'traceroute' and 'ping' in a single tool
