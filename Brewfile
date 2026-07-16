@@ -38,6 +38,8 @@ brew "lazygit"
 brew "mermaid-cli"
 # Java-based project management
 brew "maven"
+# Dedicated Java 21 runtime for jdtls; projects can keep using older JDKs
+brew "openjdk@21"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Incremental parsing library
