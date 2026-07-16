@@ -58,6 +58,8 @@ brew "ripgrep"
 brew "tmux"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Internet file retriever (mason.nvim needs it for some packages)
+brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Fish-like fast/unobtrusive autosuggestions for zsh
