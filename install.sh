@@ -20,6 +20,7 @@ link() {
 link "$DOTFILES/tmux.conf" "$HOME/.tmux.conf"
 link "$DOTFILES/nvim"      "$HOME/.config/nvim"
 link "$DOTFILES/ghostty"   "$HOME/.config/ghostty"
+link "$DOTFILES/markdownlint.yaml" "$HOME/.markdownlint.yaml"
 
 # zsh: append-only — source the shared config from ~/.zshrc, never replace it
 if ! grep -qF "dotfiles/zshrc.shared" "$HOME/.zshrc" 2>/dev/null; then

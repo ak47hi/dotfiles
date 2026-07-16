@@ -1,0 +1,17 @@
+# Global markdownlint config (symlinked to ~/.markdownlint.yaml).
+# markdownlint-cli2 discovers this for any file under $HOME.
+# Keep real-mistake rules on; silence pure style opinions.
+
+default: true
+
+# Line length — personal notes and tables regularly exceed 80 chars
+MD013: false
+
+# Blank lines around lists — too strict inside blockquotes/callouts
+MD032: false
+
+# Table pipe padding style — hand-written tables shouldn't need realignment
+MD060: false
+
+# Inline HTML — occasionally useful in notes
+MD033: false
