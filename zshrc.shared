@@ -13,3 +13,7 @@ if command -v brew >/dev/null 2>&1; then
     && source "$_brew_prefix/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
   unset _brew_prefix
 fi
+
+# Clipboard shortcuts (macOS): `echo hi | c`  ·  `p | grep foo`
+alias c='pbcopy'
+alias p='pbpaste'
