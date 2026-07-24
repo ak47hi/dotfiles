@@ -32,7 +32,7 @@ fi
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 fi
-"$HOME/.tmux/plugins/tpm/bin/install_plugins" || echo "WARNING: tmux plugin install failed; run C-a I inside tmux"
+"$HOME/.tmux/plugins/tpm/bin/install_plugins" || echo "WARNING: tmux plugin install failed; run C-b I inside tmux"
 
 # Homebrew packages
 if command -v brew >/dev/null 2>&1; then

@@ -14,7 +14,7 @@ cd ~/dotfiles && ./install.sh
 Then:
 
 1. Open Ghostty (config is already linked).
-2. `tmux`, then `C-a I` to install tmux plugins via TPM.
+2. `tmux`, then `C-b I` to install tmux plugins via TPM.
 3. `nvim` — LazyVim bootstraps plugins and Mason installs LSP servers on first run.
 
 ## Layout
